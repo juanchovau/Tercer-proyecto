@@ -1,13 +1,30 @@
-import React from 'react';
+import React from "react";
+import "./App.css";
+import Layout from "./Components/Layout/Lyaout"
+import {createStore, applyMiddleware} from "redux";
+import reducer from "./Reducers/Reducers"
+import {Provider} from "react-redux";
+import thunk from "redux-thunk";
 
-import './App.css';
+
+
+const store = createStore(reducer, applyMiddleware(thunk));
+
 
 function App() {
+
+
   return (
-    <div className="App">
-     
+    <Provider store={store} >
+    <div className = "App">
+      <Layout />
     </div>
+    </Provider>
+
   );
 }
 
 export default App;
+
+
+
