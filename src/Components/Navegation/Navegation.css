@@ -1,0 +1,70 @@
+.Navegation__containder{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #131988;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.Navegation__containder--links--enlaces{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px
+}
+
+.Navegation__containder--monedas{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #FF035D;
+    border-radius: 10px;
+}
+
+.Navegation__containder--monedas button{
+    display: flex;
+    align-items: center;
+    padding: 2px 20px;
+    background: #f53679;
+    border: white solid 1.5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    margin: 0 10px; 
+    box-shadow: 3px 3px 4px gray;
+}
+
+[alt="moneda"]{
+    margin: 2px 5px;
+}
+.Navegation__containder--perfil{
+    display:flex;
+    align-items: center;
+}
+.Navegation__containder--perfil--texto{
+    background: #53a2ec;
+    padding: 0 20px 0 60px;
+    line-height: 5px;
+    text-align: right;
+    border-radius: 40px;
+    margin-left: -50px;
+    z-index: -1;
+}
+.Navegation__containder--perfil--texto-nombre{
+    font-weight: bold;
+}
+.Navegation__containder--perfil--texto-puntos{
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    justify-items: flex-end;
+}
+.Navegation__containder--perfil--texto-puntos img{
+    margin: 0 5px;
+}
+[alt="perfil"]{
+    border-radius: 50%;
+    width: 60px;
+}

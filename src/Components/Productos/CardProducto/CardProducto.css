@@ -1,0 +1,52 @@
+.CardProducto__contenedor{
+    width: 300px;
+    background: rgb(223, 223, 223);
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.CardProducto__contenedor--img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px ;
+}
+.CardProducto__contenedor--texto{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.CardProducto__contenedor--nombre{
+    text-align: left;
+    line-height: 5px;
+    padding: 15px;
+}
+.CardProducto__contenedor--nombre :nth-child(1){
+    color:#131988;
+    font-weight: bold;
+}
+.CardProducto__contenedor--nombre :nth-child(2){
+    color:#f53679;
+    font-weight: light;
+}
+.CardProducto__contenedor--bottonRedimir{
+    background: #f53679;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 18px;
+    color:white;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px gray;
+    margin-bottom: 15px;
+}
+.CardProducto__contenedor--puntos{
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    color: rgb(116, 116, 116);
+    font-weight: bold;
+}
+.CardProducto__contenedor--textoRedimir{
+    color: #f53679;
+    font-weight: bold;
+   font-style: italic;
+}

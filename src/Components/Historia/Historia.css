@@ -1,0 +1,5 @@
+.Historia-container{
+    margin: 15px 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardProducto from "../Productos/CardProducto/CardProducto"
 import * as actions from '../../Actions/Actions';
+import "./Historia.css"
 
 class Historia extends Component {
 
@@ -11,7 +12,7 @@ componentDidMount(){
 
     render() {
         return (
-            <div>
+            <div className="Historia-container">
 
                 {this.props.state.historia.map((producto) => {
                     return (
