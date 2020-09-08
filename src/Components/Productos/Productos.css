@@ -88,3 +88,15 @@
     font-size: 30px;
     box-shadow: 3px 3px 4px rgb(128, 128, 128);
 }
+.Productos__contenedor--productos:empty{
+    display: flex;
+    height: 100px;
+    width: 70%;
+    text-align: center;
+}
+.Productos__contenedor--productos:empty::before{
+    content: "No hay resultados, prueba cambiando los filtros";
+    color: #f53679;
+    font-size: 30px;
+    margin:auto;
+}

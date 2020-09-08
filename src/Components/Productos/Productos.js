@@ -26,9 +26,19 @@ class Productos extends Component {
         const { value, name } = e.target
         this.setState({ [name]: value })
     }
-    setPagina = (e) => {
-        const { value } = e.target
-        this.setState({ paginaActual: value })
+    setPagina = (longitudFiltro, value) => {
+        // const { value } = e.target
+        // console.log("valor", )
+        if (
+            parseInt(this.state.paginaActual) + parseInt(value) < 1 ||
+            parseInt(this.state.paginaActual) + parseInt(value) >
+                Math.ceil(longitudFiltro / 16)
+        ) {
+            return null
+        }
+        this.setState({
+            paginaActual: parseInt(this.state.paginaActual) + parseInt(value),
+        })
     }
 
     render() {
@@ -128,20 +138,19 @@ class Productos extends Component {
                             <p>
                                 Página {paginaActual} de
                                 {Math.ceil(
-                                    productosFiltrados.lenght /
-                                        articulosPorPagina
-                                ) || 2}
+                                    productosFiltrados.length / articulosPorPagina
+                                )}
                             </p>
                             <div>
                                 <button
                                     className="Productos__contenedor--filtros-ContolesPaginacion-button"
-                                    value={1}
-                                    onClick={this.setPagina}
+                                    value={-1}
+                                    onClick={()=>{this.setPagina(productosFiltrados.length, -1)}}
                                 >{`<`}</button>
                                 <button
                                     className="Productos__contenedor--filtros-ContolesPaginacion-button"
-                                    value={2}
-                                    onClick={this.setPagina}
+                                    value={1}
+                                    onClick={()=>{this.setPagina(productosFiltrados.length, 1)}}
                                 >{`>`}</button>
                             </div>
                         </div>

@@ -17,7 +17,7 @@
 }
 .CardProducto__contenedor--nombre{
     text-align: left;
-    line-height: 5px;
+    line-height: 15px;
     padding: 15px;
 }
 .CardProducto__contenedor--nombre :nth-child(1){
