@@ -46,7 +46,6 @@ export const traerUsuario = () =>{
             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjU1NjcxMDc0MjM1MjAwMWVkOTA5YTIiLCJpYXQiOjE1OTk0MzI0NjR9.yWntNtnRp4RYIy4HQ1zJ0f2enNVJSq2syLYPazrOH2s",
             "Accept": "application/json"
         }
-     console.log("Id",id)
 
       fetch("https://coding-challenge-api.aerolab.co/redeem", { method: "POST", headers, body: JSON.stringify({productId: id })})
         .then(res => res.json())
@@ -60,7 +59,7 @@ export const traerUsuario = () =>{
     };
   }
 
-  export const cerrarModal = (id) =>{
+export const agregarMonedas = (cantidad) =>{
     
     return dispatch => {
         const headers = {
@@ -68,15 +67,15 @@ export const traerUsuario = () =>{
             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjU1NjcxMDc0MjM1MjAwMWVkOTA5YTIiLCJpYXQiOjE1OTk0MzI0NjR9.yWntNtnRp4RYIy4HQ1zJ0f2enNVJSq2syLYPazrOH2s",
             "Accept": "application/json"
         }
-     console.log("Id",id)
+  
 
-      fetch("https://coding-challenge-api.aerolab.co/redeem", { method: "POST", headers, body: JSON.stringify({productId: id })})
+      fetch("https://coding-challenge-api.aerolab.co/user/points", { method: "POST", headers, body: JSON.stringify({amount: cantidad})})
         .then(res => res.json())
         .then(data =>{
             console.log(data)
             dispatch({
-                type:actionTypes.REDIMIR_PRODUCTO,
-                payload: data
+                type:actionTypes.AGREGAR_PUNTOS,
+                payload: "agregados"
             })
         })
     };

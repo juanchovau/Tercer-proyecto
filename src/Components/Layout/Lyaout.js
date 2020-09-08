@@ -16,7 +16,7 @@ export default function Layout() {
 			<Navegation />
 
 		<Switch>
-			<Route path="/" exact component={Productos} />
+			<Route path="/Tercer-proyecto/" exact component={Productos} />
 			<Route path="/historia"  component={Historia} />
 		</Switch>
 
