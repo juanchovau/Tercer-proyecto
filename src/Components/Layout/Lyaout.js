@@ -17,7 +17,7 @@ export default function Layout() {
 
 		<Switch>
 			<Route path="/Tercer-proyecto/" exact component={Productos} />
-			<Route path="/historia"  component={Historia} />
+			<Route path="/Tercer-proyecto/historia"  component={Historia} />
 		</Switch>
 
 		</div>

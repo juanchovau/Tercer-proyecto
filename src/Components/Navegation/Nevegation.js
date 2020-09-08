@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../Actions/Actions';
 import React, { Component } from 'react'
 import Modal from "react-modal"
+import {Link} from "react-router-dom"
 
 class Nevegation extends Component {
 
@@ -14,6 +15,8 @@ class Nevegation extends Component {
     render() {
         return (
             <div>
+                <Link to="/Tercer-proyecto/">Inicio</Link>
+                <Link to="/Tercer-proyecto/historia">Historial</Link>
                 <button onClick={()=>{this.props.agregarMonedas(1000)}} >Agregar 1000</button>
                 <button onClick={()=>{this.props.agregarMonedas(5000)}} >Agregar 5000</button>
                 <button onClick={()=>{this.props.agregarMonedas(7500)}}>Agregar 7500</button>

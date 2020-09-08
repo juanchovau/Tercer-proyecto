@@ -11,14 +11,16 @@ class CardProducto extends Component {
     }
 
     render() {
-        const{name, cost, category, img, id} = this.props
+        const{name, cost, category, img, id, puntosDisponibles, historia} = this.props
         return (
             <div>
                 <p>{name}</p>
-                <p>{cost}</p>
                 <p>{category}</p>
+                <p>{cost}</p>
+           
+                <p> {(puntosDisponibles - cost) < 0 ? `Te faltan ${(puntosDisponibles - cost)*(-1)} puntos` : ""}</p>
                 <img src={img} alt={`imagen de ${name}`} />
-                <button onClick={()=>{this.redimir(id)}} >Redimir</button>
+                { historia=== false ? <button onClick={()=>{this.redimir(id)}} >Redimir</button> : ""}
             </div>
         )
     }

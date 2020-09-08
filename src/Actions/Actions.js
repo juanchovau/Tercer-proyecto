@@ -81,7 +81,23 @@ export const agregarMonedas = (cantidad) =>{
     };
   }
 
-
+  export const traerHistoria = () =>{
+    
+    return dispatch => {
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjU1NjcxMDc0MjM1MjAwMWVkOTA5YTIiLCJpYXQiOjE1OTk0MzI0NjR9.yWntNtnRp4RYIy4HQ1zJ0f2enNVJSq2syLYPazrOH2s" 
+      }
+      fetch("https://coding-challenge-api.aerolab.co/user/history", { method: "GET", headers: headers})
+        .then(res => res.json())
+        .then(data =>{
+            dispatch({
+                type:actionTypes.TRAER_HISTORIA,
+                payload: data
+            })
+        })
+    };
+  }
  
  
 
